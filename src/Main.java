@@ -6,7 +6,9 @@ public class Main {
         StudentGrades myClass = new StudentGrades();
         Scanner userInput = new Scanner(System.in);
         char userChoice;
-        String inputName;
+        String inputFirstName;
+        String inputLastName;
+        int inputID;
         String inputGrade;
 
         System.out.println("Welcome to my program that stores students and their grades and outputs them all in alphabetical order");
@@ -17,23 +19,30 @@ public class Main {
 
             switch (userChoice) {
                 case 'a':
-                    System.out.println("Please enter the name of student to add: ");
-                    inputName = userInput.nextLine();
+                    System.out.println("Please enter the last name of student to add: ");
+                    inputLastName = userInput.nextLine();
+                    System.out.println("Please enter the first name of student to add: ");
+                    inputFirstName = userInput.nextLine();
+                    System.out.println("Please enter the ID of student to add: ");
+                    inputID = userInput.nextInt();
+                    userInput.nextLine();
                     System.out.println("Please enter grade of our specified student: ");
                     inputGrade = userInput.nextLine();
-                    myClass.addStudent(inputName, inputGrade);
+                    myClass.addStudent(inputLastName, inputFirstName, inputID, inputGrade);
                     break;
                 case 'r':
-                    System.out.println("Please enter the name of student to remove: ");
-                    inputName = userInput.nextLine();
-                    myClass.removeStudent(inputName);
+                    System.out.println("Please enter the ID of student to remove: ");
+                    inputID = userInput.nextInt();
+                    userInput.nextLine();
+                    myClass.removeStudent(inputID);
                     break;
                 case 'm':
-                    System.out.println("Please enter the name of student to modify grade: ");
-                    inputName = userInput.nextLine();
+                    System.out.println("Please enter the ID of student to modify grade: ");
+                    inputID = userInput.nextInt();
+                    userInput.nextLine();
                     System.out.println("Please enter the new grade for student: ");
                     inputGrade = userInput.nextLine();
-                    myClass.changeGrade(inputName, inputGrade);
+                    myClass.changeGrade(inputID, inputGrade);
                     break;
                 case 'p':
                     myClass.printAllGrades();
@@ -47,3 +56,5 @@ public class Main {
         } while(userChoice != 'x');
     }
 }
+
+
