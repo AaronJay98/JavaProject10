@@ -62,6 +62,9 @@ public class StudentGrades {
     }
 
     public void printAllGrades() {
+        if(studentGrades.isEmpty()) {
+            System.out.println("Student list is empty");
+        }
         studentGrades.forEach((name, grade) -> printAllGradesHelper(name, grade));
     }
 

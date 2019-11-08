@@ -28,13 +28,17 @@ public class Main {
                     userInput.nextLine();
                     System.out.println("Please enter grade of our specified student: ");
                     inputGrade = userInput.nextLine();
-                    myClass.addStudent(inputLastName, inputFirstName, inputID, inputGrade);
+                    if(!myClass.addStudent(inputLastName, inputFirstName, inputID, inputGrade)) {
+                        System.out.println("Student with same ID already exists! Adding unsuccessful");
+                    }
                     break;
                 case 'r':
                     System.out.println("Please enter the ID of student to remove: ");
                     inputID = userInput.nextInt();
                     userInput.nextLine();
-                    myClass.removeStudent(inputID);
+                    if(!myClass.removeStudent(inputID)) {
+                        System.out.println("Student not found! Remove unsuccessful.");
+                    }
                     break;
                 case 'm':
                     System.out.println("Please enter the ID of student to modify grade: ");
@@ -42,7 +46,9 @@ public class Main {
                     userInput.nextLine();
                     System.out.println("Please enter the new grade for student: ");
                     inputGrade = userInput.nextLine();
-                    myClass.changeGrade(inputID, inputGrade);
+                    if(!myClass.changeGrade(inputID, inputGrade)) {
+                        System.out.println("Student not found! Modify unsuccessful");
+                    }
                     break;
                 case 'p':
                     myClass.printAllGrades();
