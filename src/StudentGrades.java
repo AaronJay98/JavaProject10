@@ -8,6 +8,7 @@ public class StudentGrades {
     }
 
     public boolean addStudent(String lastName, String firstName, int id, String grade) {
+        //This is one way to compare the id attribute (v1)
         Student curStudent;
         Set<Student> setKeys = studentGrades.keySet();
         Iterator<Student> setKeysIterator = setKeys.iterator();
@@ -19,7 +20,7 @@ public class StudentGrades {
             }
         }
 
-
+        //if a student with the indicated user input ID doesnt exist, the indicated student will be added to the map
         Student inputStudent = new Student();
         inputStudent.lastName = lastName;
         inputStudent.firstName = firstName;
@@ -30,34 +31,24 @@ public class StudentGrades {
     }
 
     public boolean removeStudent(int id) {
-        Student curStudent;
-        Set<Student> setKeys = studentGrades.keySet();
-        Iterator<Student> setKeysIterator = setKeys.iterator();
-
-        while(setKeysIterator.hasNext()) {
-            curStudent = setKeysIterator.next();
-            if(curStudent.id == id) {
-                studentGrades.remove(curStudent);
+        //This is a much simpler version (v2) to compare keys compared to the addStudent method version
+        for(Student key : studentGrades.keySet()) {
+            if(key.id == id) {
+                studentGrades.remove(key);
                 return true;
             }
         }
-
         return false;
     }
 
     public boolean changeGrade(int id, String grade) {
-        Student curStudent;
-        Set<Student> setKeys = studentGrades.keySet();
-        Iterator<Student> setKeysIterator = setKeys.iterator();
-
-        while(setKeysIterator.hasNext()) {
-            curStudent = setKeysIterator.next();
-            if(curStudent.id == id) {
-                studentGrades.replace(curStudent, grade);
+        //This is same v2 method as the removeStudent method except it changes the grade
+        for(Student key : studentGrades.keySet()) {
+            if(key.id == id) {
+                studentGrades.replace(key, grade);
                 return true;
             }
         }
-
         return false;
     }
 
@@ -68,8 +59,9 @@ public class StudentGrades {
         studentGrades.forEach((name, grade) -> printAllGradesHelper(name, grade));
     }
 
+    //This is the helper method for printAllGrades public method
     private void printAllGradesHelper(Student name, String grade) {
-        System.out.println(name.lastName + ", " + name.firstName + ": " + grade);
+        System.out.println(name.lastName + ", " + name.firstName + " (" + name.id + "): " + grade);
     }
 
 

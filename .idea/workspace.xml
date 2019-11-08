@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="067bcb29-27ca-416d-a1de-68d90c7a5131" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProgrammingAssignment10/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProgrammingAssignment10/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProgrammingAssignment10/IDComp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProgrammingAssignment10/IDComp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProgrammingAssignment10/StudentGrades.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProgrammingAssignment10/StudentGrades.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StudentGrades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentGrades.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,6 +73,7 @@
       <updated>1572996275023</updated>
       <workItem from="1572996278101" duration="9843000" />
       <workItem from="1573178717100" duration="3213000" />
+      <workItem from="1573183349486" duration="1552000" />
     </task>
     <servers />
   </component>

@@ -13,6 +13,7 @@ public class Main {
 
         System.out.println("Welcome to my program that stores students and their grades and outputs them all in alphabetical order");
 
+        //do while loop that ask a user what they want to do and does what user asks until they ask to exit loop by entering 'x'
         do {
             System.out.println("Please enter 1 of the following chars: 'a' to add a student, 'r' to remove a student, 'm' to modify a students grades, 'p' to print all students grades, 'x' to end program");
             userChoice = userInput.nextLine().charAt(0);
